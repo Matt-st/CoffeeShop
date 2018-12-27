@@ -1,6 +1,10 @@
 # Compiled class file
 *.class
 
+.project
+.classpath
+.settings/
+
 # Log file
 *.log
 
@@ -24,3 +28,6 @@ hs_err_pid*
 
 .metadata
 RemoteSystemsTempFiles
+
+
+/target/
