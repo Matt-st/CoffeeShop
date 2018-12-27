@@ -1,2 +1,4 @@
 # CoffeeShop
-Simple set of applications to work on technologies.
+This is a sample application that shows the backend portion of an application that provides CRUD features for CoffeeShop menu.
+
+## 
