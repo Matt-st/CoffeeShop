@@ -12,22 +12,22 @@ This is a sample application that presents rest api's that allow for retrieve op
 This application reads from a Kafka topic that captures the event logs from our middleware applications.  Currently the event log only captures the event that occurred but in the future it will capture information about the user that triggered the event.
 
 # Technologies
-Spring-boot
-Kafka - application communication
-Cassandra -  datastore for our set of applications.
+Spring-boot  
+Kafka - application communication  
+Cassandra -  datastore for our set of applications  
 
 
 
 ## Cassandra Database
 
-Keyspace `menuitems`:
+Keyspace `menuitems`:  
 ` create keyspace menuitems
-   ... with replication = {'class':'SimpleStrategy', 'replication_factor' : 3};`
+   ... with replication = {'class':'SimpleStrategy', 'replication_factor' : 3};`  
   
- `create table items (id int primary key, name text, description text);`
+ `create table items (id int primary key, name text, description text);`  
 
 
-Keyspace `menulogs`:
+Keyspace `menulogs`:  
 ` create keyspace menulogs
-   ... with replication = {'class':'SimpleStrategy', 'replication_factor' : 3};`
-`create table logs (id UUID PRIMARY KEY, description text, log_timestamp timestamp, log_day date);`
+   ... with replication = {'class':'SimpleStrategy', 'replication_factor' : 3};`  
+`create table logs (id UUID PRIMARY KEY, description text, log_timestamp timestamp, log_day date);`  
