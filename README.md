@@ -25,5 +25,4 @@ Keyspace:
    ... with replication = {'class':'SimpleStrategy', 'replication_factor' : 3};`
    
 Tables in Keyspace:
- `create keyspace menuitems
-   ... with replication = {'class':'SimpleStrategy', 'replication_factor' : 3};`
+ `create table logs (id int primary key, name text, description text);`
