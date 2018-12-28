@@ -9,4 +9,16 @@ This is a sample application that presents rest api's that allow for retrieve op
 
 
 ## CoffeeShop-EventLog
+This application reads from a Kafka topic that captures the event logs from our middleware applications.  Currently the event log only captures the event that occurred but in the future it will capture information about the user that triggered the event.
 
+# Technologies
+Spring-boot
+Kafka - application communication
+Cassandra -  datastore for our set of applications.
+
+
+
+## Cassandra Database
+` create keyspace menuitems
+   ... with replication = {'class':'SimpleStrategy', 'replication_factor' : 3};`
+   
