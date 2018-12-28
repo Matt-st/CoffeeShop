@@ -19,6 +19,11 @@ Cassandra -  datastore for our set of applications.
 
 
 ## Cassandra Database
+
+Keyspace:
 ` create keyspace menuitems
    ... with replication = {'class':'SimpleStrategy', 'replication_factor' : 3};`
    
+Tables in Keyspace:
+ `create keyspace menuitems
+   ... with replication = {'class':'SimpleStrategy', 'replication_factor' : 3};`
