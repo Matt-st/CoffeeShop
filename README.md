@@ -13,6 +13,9 @@ This application reads from a Kafka topic that captures the event logs from our 
 
 By storing our logs in the database then we can hook up a search tool where we can easily search for logs when we our troubleshooting application issues.
 
+## CoffeeShop-Eureka
+This application is the spring-boot eureka server which allows for service discovery and registration.
+
 # Technologies
 Spring-boot  
 Kafka - application communication  
