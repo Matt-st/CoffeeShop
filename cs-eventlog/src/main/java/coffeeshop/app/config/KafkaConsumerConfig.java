@@ -31,9 +31,9 @@ public class KafkaConsumerConfig {
 	    }
 
 	    @Bean
-	    public ConcurrentKafkaListenerContainerFactory<String, String> testKafkaListenerContainerFactory() {
+	    public ConcurrentKafkaListenerContainerFactory<String, String> logsKafkaListenerContainerFactory() {
 	        ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<String, String>();
-	        factory.setConsumerFactory(consumerFactory("foo"));
+	        factory.setConsumerFactory(consumerFactory("logs"));
 	        return factory;
 	    }
 }

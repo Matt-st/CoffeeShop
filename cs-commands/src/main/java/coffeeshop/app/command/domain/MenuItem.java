@@ -1,4 +1,4 @@
-package coffeeshop.app.command.objects;
+package coffeeshop.app.command.domain;
 
 public class MenuItem {
 	

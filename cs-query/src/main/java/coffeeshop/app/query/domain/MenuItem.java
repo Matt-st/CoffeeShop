@@ -1,4 +1,4 @@
-package coffeeshop.app.query.objects;
+package coffeeshop.app.query.domain;
 
 public class MenuItem {
 	

@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import coffeeshop.app.query.objects.MenuItem;
+import coffeeshop.app.query.domain.MenuItem;
 
 
 @Service

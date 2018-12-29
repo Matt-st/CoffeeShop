@@ -3,7 +3,7 @@
   <groupId>com.coffeeshop.event</groupId>
   <artifactId>cs-eventlog</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>cs-evnetlog</name>
+  <name>cs-eventlog</name>
   
   	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -30,6 +30,10 @@
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-cassandra</artifactId>
+		</dependency>
 	</dependencies>
 
 	<properties>
@@ -39,10 +43,20 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+			    <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <executions>
+            <execution>
+                <goals>
+                    <goal>repackage</goal>
+                </goals>
+                <configuration>
+                    <classifier>exec</classifier>
+                </configuration>
+            </execution>
+        </executions>
+    </plugin>
 		</plugins>
 	</build>
 </project>
