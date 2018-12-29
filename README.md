@@ -28,6 +28,6 @@ Keyspace `menuitems`:
 
 
 Keyspace `menulogs`:  
-` create keyspace menulogs
+`create keyspace menulogs
    ... with replication = {'class':'SimpleStrategy', 'replication_factor' : 3};`  
-`create table logs (id UUID PRIMARY KEY, description text, log_timestamp timestamp, log_day date);`  
+`create table logs (id UUID PRIMARY KEY, description text, log_timestamp text);`  
