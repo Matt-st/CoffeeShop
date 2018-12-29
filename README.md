@@ -11,6 +11,8 @@ This is a sample application that presents rest api's that allow for retrieve op
 ## CoffeeShop-EventLog
 This application reads from a Kafka topic that captures the event logs from our middleware applications.  Currently the event log only captures the event that occurred but in the future it will capture information about the user that triggered the event.
 
+By storing our logs in the database then we can hook up a search tool where we can easily search for logs when we our troubleshooting application issues.
+
 # Technologies
 Spring-boot  
 Kafka - application communication  
