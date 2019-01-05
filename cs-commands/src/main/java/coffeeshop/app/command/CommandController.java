@@ -1,10 +1,16 @@
 package coffeeshop.app.command;
 
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import coffeeshop.app.command.domain.MenuItem;
 
 @RestController
 public class CommandController {
@@ -17,18 +23,18 @@ public class CommandController {
 	}
 
 	@PostMapping("/menu")
-	public void createMenuItem() {	
-		commandService.createMenuItem();;
+	public void createMenuItem(@RequestBody MenuItem item) {	
+		commandService.createMenuItem(item);
 	}
 	
 	@PutMapping("/menu/{id}")
-	public void updateMenuItem() {	
-		commandService.updateMenuItem();;
+	public void updateMenuItem(@RequestBody MenuItem item) {	
+		commandService.updateMenuItem(item);
 	}
 	
 	@DeleteMapping("/menu/{id}")
-	public void deleteMenuItem() {	
-		commandService.deleteMenuItem();;
+	public void deleteMenuItem(@PathVariable("id") UUID id) {	
+		commandService.deleteMenuItem(id);
 	}
 	
 	

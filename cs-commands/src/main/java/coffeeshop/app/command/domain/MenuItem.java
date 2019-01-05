@@ -1,16 +1,42 @@
 package coffeeshop.app.command.domain;
 
+import java.util.UUID;
+
+import org.springframework.data.cassandra.core.mapping.CassandraType;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.Table;
+
+import com.datastax.driver.core.DataType;
+
+
+@Table("items")
 public class MenuItem {
 	
-	public Long id;
+	@PrimaryKey
+    @CassandraType(type = DataType.Name.UUID)
+    private UUID id;
+	private String description;
+	private String name;
+	private String category;
 	
-	public String name;
+
+	public UUID getId() {
+		return id;
+	}
 	
-	public String description;
-	
-	public MenuItem(String name, String description){
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public MenuItem(String name, String description, String category){
 		this.name = name;
 		this.description = description;
+		this.id = UUID.randomUUID();
+		this.category = category;
 	}
 	
 	public String getName() {
@@ -29,13 +55,5 @@ public class MenuItem {
 		this.description = description;
 	}
 	
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
 }
 

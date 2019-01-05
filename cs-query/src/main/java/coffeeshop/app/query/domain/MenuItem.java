@@ -1,16 +1,36 @@
 package coffeeshop.app.query.domain;
 
+import java.util.UUID;
+
 public class MenuItem {
 	
 	public String name;
 	
 	public String description;
 	
-	private Long id;
+	private UUID id;
 	
-	public MenuItem(String name, String description){
+	private String category;
+	
+
+	
+	public MenuItem(String name, String description, String category, UUID id){
 		this.name = name;
 		this.description = description;
+		this.category = category;
+		this.id = id;
+	}
+
+	public UUID getId() {
+		return id;
+	}
+	
+	public String getCategory() {
+		return category;
+	}
+	
+	public void setCategory(String category) {
+		this.category = category;
 	}
 	
 	public String getName() {

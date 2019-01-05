@@ -55,8 +55,8 @@ public class MenuLog implements Serializable{
     }
     
 	public MenuLog() {
-        id = UUID.randomUUID();
+        this.id = UUID.randomUUID();
         Date date = new Date();
-        log_timestamp = sdf.format(date);
+        this.log_timestamp = sdf.format(date);
     }
 }
