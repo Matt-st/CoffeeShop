@@ -8,7 +8,7 @@ public interface CommandService {
 	
 	public void updateMenuItem(MenuItem item);
 	
-	public void deleteMenuItem(UUID id);
+	public void deleteMenuItem(String id);
 	
 	public void createMenuItem(MenuItem item);
 

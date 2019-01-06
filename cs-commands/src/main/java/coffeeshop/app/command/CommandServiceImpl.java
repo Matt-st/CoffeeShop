@@ -1,7 +1,5 @@
 package coffeeshop.app.command;
 
-import java.util.UUID;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -33,7 +31,7 @@ public class CommandServiceImpl implements CommandService {
 		
 	}
 
-	public void deleteMenuItem(UUID id) {
+	public void deleteMenuItem(String id) {
 		// TODO Auto-generated method stub
 		sendMessage("Delete menu item.");
 		repo.deleteById(id);

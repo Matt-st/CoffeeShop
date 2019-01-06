@@ -34,7 +34,7 @@ public class CommandController {
 	}
 	
 	@DeleteMapping("/menu/{id}")
-	public void deleteMenuItem(@PathVariable("id") UUID id) {	
+	public void deleteMenuItem(@PathVariable("id") String id) {	
 		commandService.deleteMenuItem(id);
 	}
 	
