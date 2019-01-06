@@ -23,7 +23,8 @@ public class CommandController {
 	}
 
 	@PostMapping("/menu")
-	public void createMenuItem(@RequestBody MenuItem item) {	
+	public void createMenuItem(@RequestBody MenuItem item) {
+		item.setId(UUID.randomUUID().toString()	);
 		commandService.createMenuItem(item);
 	}
 	
