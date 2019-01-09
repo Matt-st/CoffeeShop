@@ -27,9 +27,9 @@ public class QueryServiceImpl implements QueryService{
 	
 	public List<MenuItem> retrieveMenuItems() {
 		List<MenuItem> l = new ArrayList<MenuItem>();
-		l.add(new MenuItem("Bread", "Loaves of bread.", "Breakfast", UUID.randomUUID()));
-		l.add(new MenuItem("sandwich", "BLT", "Lunch", UUID.randomUUID()));
-		l.add(new MenuItem("soup", "tomato soup", "Dinner", UUID.randomUUID()));
+		l.add(new MenuItem("Bread", "Loaves of bread.", "Breakfast", UUID.randomUUID().toString()));
+		l.add(new MenuItem("sandwich", "BLT", "Lunch", UUID.randomUUID().toString()));
+		l.add(new MenuItem("soup", "tomato soup", "Dinner", UUID.randomUUID().toString()));
 		
 		kafkaTemplate.send(topicName, "Retrieve menu items!");
 		
