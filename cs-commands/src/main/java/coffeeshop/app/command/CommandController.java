@@ -29,7 +29,7 @@ public class CommandController {
 		this.commandService = commandService;
 	}
 
-	@PostMapping("/menu")
+	@PostMapping(path = "/menu", produces = "application/json")
 	@ApiOperation(value = "Add a menu item",response = List.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successfully added a menu item"),
@@ -42,7 +42,7 @@ public class CommandController {
 		commandService.createMenuItem(item);
 	}
 	
-	@PutMapping("/menu/{id}")
+	@PutMapping(path = "/menu/{id}", produces = "application/json")
 	@ApiOperation(value = "Update a menu item",response = List.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successfully updated a menu item"),
@@ -54,7 +54,7 @@ public class CommandController {
 		commandService.updateMenuItem(item);
 	}
 	
-	@DeleteMapping("/menu/{id}")
+	@DeleteMapping(path = "/menu/{id}", produces = "application/json")
 	@ApiOperation(value = "View a list of menu items",response = List.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successfully deleted a menu item"),
