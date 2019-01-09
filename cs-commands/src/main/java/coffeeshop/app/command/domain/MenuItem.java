@@ -1,5 +1,7 @@
 package coffeeshop.app.command.domain;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import java.util.UUID;
 
 import org.springframework.data.cassandra.core.mapping.CassandraType;
@@ -14,9 +16,13 @@ public class MenuItem {
 	
 	@PrimaryKey
     @CassandraType(type = DataType.Name.TEXT)
-    private String id;
-	private String description;
-	private String name;
+	@ApiModelProperty(value = "Name of the menu item like bannana or apple.")
+	public String name;
+	@ApiModelProperty(value = "Description provides information about item.")
+	public String description;
+	@ApiModelProperty(value = "Unique identifier used to identify", allowableValues = "available,pending,sold")
+	private String id;
+	@ApiModelProperty(value = "Category is a value to represent where on the menu the items belong.", allowableValues = "Breakfast, Brunch, Lunch, Dinner")
 	private String category;
 	
 	public MenuItem(){	}
