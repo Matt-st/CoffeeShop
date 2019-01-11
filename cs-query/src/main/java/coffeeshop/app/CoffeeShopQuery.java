@@ -14,21 +14,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-@Configuration
-@EnableSwagger2
+
 public class CoffeeShopQuery {
 
     public static void main(String[] args) {
         SpringApplication.run(CoffeeShopQuery.class, args);
     }
     
-    @Bean
-    public Docket api() { 
-        return new Docket(DocumentationType.SWAGGER_2)
-          .select()                                  
-          .apis(RequestHandlerSelectors.basePackage("coffeeshop.app.query"))             
-          .paths(PathSelectors.any())                          
-          .build();                                           
-    }
 }
 
