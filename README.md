@@ -1,5 +1,5 @@
 # CoffeeShop
-This is a sample application that shows the backend portion of an application that provides CRUD features for CoffeeShop menu.
+This is an example application that shows the usage of much of the spring framework plus some other interesting aspects and concepts on building real world applications.
 
 ## CoffeeShop-Command
 This is a sample application that presents rest api's that allow for Create, Update, and Delete operations.  We are using the CQRS design pattern, this pattern allows us to scale the functionality of our application separately.
@@ -17,10 +17,12 @@ By storing our logs in the database then we can hook up a search tool where we c
 This application is the spring-boot eureka server which allows for service discovery and registration.
 
 # Technologies
+Spring Cloud Api
+Spring Discovery/Registration Service - Eureka
 Spring-boot  
 Kafka - application communication  
 Cassandra -  datastore for our set of applications  
-
+Zipkin Service
 
 
 ## Cassandra Database
