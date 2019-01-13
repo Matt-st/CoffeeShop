@@ -17,8 +17,8 @@ By storing our logs in the database then we can hook up a search tool where we c
 This application is the spring-boot eureka server which allows for service discovery and registration.
 
 # Technologies
-Spring Cloud Api
-Spring Discovery/Registration Service - Eureka
+Spring Cloud Api  
+Spring Discovery/Registration Service - Eureka  
 Spring-boot  
 Kafka - application communication  
 Cassandra -  datastore for our set of applications  
