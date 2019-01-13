@@ -26,20 +26,20 @@ public class CommandServiceImpl implements CommandService {
 	
 	public void updateMenuItem(MenuItem item) {
 		// TODO Auto-generated method stub
-		sendMessage("Update menu item.");
+		//sendMessage("Update menu item.");
 		repo.save(item);
 		
 	}
 
 	public void deleteMenuItem(String id) {
 		// TODO Auto-generated method stub
-		sendMessage("Delete menu item.");
+		//sendMessage("Delete menu item.");
 		repo.deleteById(id);
 	}
 
 	public void createMenuItem(MenuItem item) {
 		// TODO Auto-generated method stub
-		sendMessage("Create menu item.");
+		//sendMessage("Create menu item.");
 		repo.save(item);
 	}
 

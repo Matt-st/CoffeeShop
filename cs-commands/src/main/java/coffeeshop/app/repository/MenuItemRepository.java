@@ -1,6 +1,6 @@
 package coffeeshop.app.repository;
 
-import java.util.UUID;
+
 
 import org.springframework.data.repository.CrudRepository;
 

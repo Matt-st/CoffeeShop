@@ -1,8 +1,6 @@
 package coffeeshop.app.query;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,6 +8,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import coffeeshop.app.query.domain.MenuItem;
+import coffeeshop.app.repository.MenuItemRepository;
 
 
 @Service
@@ -17,6 +16,9 @@ public class QueryServiceImpl implements QueryService{
 
 	@Autowired
 	private KafkaTemplate<String, String> kafkaTemplate;
+	
+	@Autowired
+	private MenuItemRepository repo;
 	
 	@Value(value = "${message.topic.name}")
     private String topicName;
@@ -26,12 +28,9 @@ public class QueryServiceImpl implements QueryService{
 	}
 	
 	public List<MenuItem> retrieveMenuItems() {
-		List<MenuItem> l = new ArrayList<MenuItem>();
-		l.add(new MenuItem("Bread", "Loaves of bread.", "Breakfast", UUID.randomUUID().toString()));
-		l.add(new MenuItem("sandwich", "BLT", "Lunch", UUID.randomUUID().toString()));
-		l.add(new MenuItem("soup", "tomato soup", "Dinner", UUID.randomUUID().toString()));
+		List<MenuItem> l = (List<MenuItem>) repo.findAll();
 		
-		kafkaTemplate.send(topicName, "Retrieve menu items!");
+		//kafkaTemplate.send(topicName, "Retrieve menu items!");
 		
 		
 		return l;
