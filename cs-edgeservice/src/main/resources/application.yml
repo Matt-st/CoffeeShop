@@ -1,0 +1,16 @@
+server:
+  port: 9999	
+spring:
+  application:
+    name: cs-edgeservice
+  cloud:
+    gateway:
+      routes:
+      - id: query-service
+        uri: lb://cs-query
+        predicates:
+        - Path=/menu
+      discovery:
+        locator:
+          enabled: true
+     
