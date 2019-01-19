@@ -1,6 +1,11 @@
 server:
   port: 9999	
 spring:
+  sleuth:
+    sampler:
+      percentage: 1.0
+  zipkin:
+    baseUrl: localhost:9411
   application:
     name: cs-edgeservice
   cloud:

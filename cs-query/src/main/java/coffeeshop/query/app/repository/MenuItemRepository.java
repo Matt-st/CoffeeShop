@@ -1,8 +1,8 @@
-package coffeeshop.app.repository;
+package coffeeshop.query.app.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import coffeeshop.app.query.domain.MenuItem;
+import coffeeshop.query.app.domain.MenuItem;
 
 
 

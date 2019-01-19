@@ -1,8 +1,8 @@
-package coffeeshop.app.query;
+package coffeeshop.query.app.service;
 
 import java.util.List;
 
-import coffeeshop.app.query.domain.MenuItem;
+import coffeeshop.query.app.domain.MenuItem;
 
 public interface QueryService {
 	public List<MenuItem> retrieveMenuItems();

@@ -1,4 +1,4 @@
-package coffeeshop.app.config;
+package coffeeshop.query.app.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

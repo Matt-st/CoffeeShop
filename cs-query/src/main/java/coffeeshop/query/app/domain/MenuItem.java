@@ -1,4 +1,4 @@
-package coffeeshop.app.query.domain;
+package coffeeshop.query.app.domain;
 
 import org.springframework.data.cassandra.core.mapping.CassandraType;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;

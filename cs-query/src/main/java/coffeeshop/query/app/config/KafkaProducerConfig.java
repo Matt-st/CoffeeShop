@@ -1,4 +1,4 @@
-package coffeeshop.app.config;
+package coffeeshop.query.app.config;
 
 import java.util.HashMap;
 import java.util.Map;
