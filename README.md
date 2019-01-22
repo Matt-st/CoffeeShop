@@ -23,6 +23,8 @@ Spring-boot
 Kafka - application communication  
 Cassandra -  datastore for our set of applications  
 Zipkin Service
+Hystrix
+Spring Cloud Config
 
 
 ## Cassandra Database
