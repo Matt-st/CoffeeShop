@@ -22,7 +22,9 @@ Spring Discovery/Registration Service - Eureka
 Spring-boot  
 Kafka - application communication  
 Cassandra -  datastore for our set of applications  
-Zipkin Service
+Zipkin Service  
+Hystrix  
+Spring Cloud Config  
 
 
 ## Cassandra Database
