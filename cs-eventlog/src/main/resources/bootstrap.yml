@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cs-query
+    name: cs-eventlog
   cloud:
     discovery:
       enabled: true

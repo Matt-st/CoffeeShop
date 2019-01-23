@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cs-query
+    name: cs-edgeservice
   cloud:
     discovery:
       enabled: true
