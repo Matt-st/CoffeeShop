@@ -3,3 +3,10 @@ server:
 
 # show full health details at /health
 endpoints.health.sensitive: false
+spring:
+  application:
+    name: cs-config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
