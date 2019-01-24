@@ -1,0 +1,1 @@
+# CoffeeShop Eureka Discovery and Registration Service
