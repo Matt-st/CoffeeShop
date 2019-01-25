@@ -6,3 +6,6 @@ The query service is the 'Q' in CQRS which stands for command query response seg
 * Start the cs-config service
 * Start the cs-edgeservice service
 * Start the cs-query service by running `mvn spring-boot:run`
+
+## Operations
+![Swagger UI Image](img/swagger-doc.png?raw=true "Title")
