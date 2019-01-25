@@ -1,5 +1,6 @@
 package coffeeshop.query.app.query.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +13,15 @@ import coffeeshop.query.app.repository.MenuItemRepository;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
-
+import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class QueryServiceImpl implements QueryService{
 
+	Logger logger = LoggerFactory.getLogger(QueryServiceImpl.class);
+	
 	@Autowired
 	private KafkaTemplate<String, String> kafkaTemplate;
 	
@@ -54,8 +59,16 @@ public class QueryServiceImpl implements QueryService{
 		return (List<MenuItem>) repo.findAll();
 	}
 	
-	public String retrieveFallback() {
-	    return "Cloud Native Java (O'Reilly)";
+	public  List<MenuItem> retrieveFallback() {
+		List<MenuItem> item = new ArrayList<MenuItem>();
+	     item.add(new MenuItem("default","default", "default", "default"));
+	     return item;
 	  }
 
+	public String publishKafkaEventFallback() {
+	     logger.info("kafka is down");
+	     return "Kafka is down";
+	     
+	  }
+	
 }
