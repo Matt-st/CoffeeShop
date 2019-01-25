@@ -1,6 +1,5 @@
-package coffeeshop.app.command;
+package coffeeshop.app.command.service;
 
-import java.util.UUID;
 
 import coffeeshop.app.command.domain.MenuItem;
 

@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import coffeeshop.app.command.domain.MenuItem;
+import coffeeshop.app.command.service.CommandService;
 
 @RestController
 @Api(value="commandMenuItems", description="Operations pertaining to menu items for the Coffeeshop.")

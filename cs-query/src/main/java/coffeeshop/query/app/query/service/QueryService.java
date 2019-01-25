@@ -1,4 +1,4 @@
-package coffeeshop.query.app.service;
+package coffeeshop.query.app.query.service;
 
 import java.util.List;
 

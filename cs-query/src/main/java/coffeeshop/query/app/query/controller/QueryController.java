@@ -1,4 +1,4 @@
-package coffeeshop.query.app.controller;
+package coffeeshop.query.app.query.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import coffeeshop.query.app.domain.MenuItem;
-import coffeeshop.query.app.service.QueryService;
+import coffeeshop.query.app.query.service.QueryService;
 
 @RestController
 @Api(value="retrieveMenuItems", description="Operations pertaining to menu items for the Coffeeshop.")
