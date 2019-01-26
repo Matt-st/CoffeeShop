@@ -36,14 +36,8 @@ public class QueryServiceImpl implements QueryService {
 
 	@HystrixCommand(fallbackMethod = "retrieveFallback", commandProperties = { @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000") })
 	public List<MenuItem> retrieveMenuItems() {
-		List<MenuItem> l = null;
-		try {
-			l = retrieve();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
+		List<MenuItem> l = retrieve();
+		
 		publishKafkaEvent();
 
 		return l;
@@ -54,9 +48,9 @@ public class QueryServiceImpl implements QueryService {
 		kafkaTemplate.send(topicName, "Retrieve menu items!");
 	}
 
-	private List<MenuItem> retrieve() throws InterruptedException {
+	private List<MenuItem> retrieve() {
 		logger.info("Retrieveing data from cassandra table.");
-		Thread.sleep(4000);
+		
 		return (List<MenuItem>) repo.findAll();
 	}
 
