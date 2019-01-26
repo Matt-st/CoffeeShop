@@ -3,4 +3,4 @@ spring:
     name: cs-zipkin
   cloud:
     discovery:
-      enabled: true
+      enabled: false
