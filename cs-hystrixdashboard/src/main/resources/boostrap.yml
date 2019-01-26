@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: cs-hystrixdashboard
+  cloud:
+    discovery:
+      enabled: true
