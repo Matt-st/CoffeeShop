@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 
 import brave.sampler.Sampler;
 
-//@EnableDiscoveryClient
+@EnableDiscoveryClient
 @SpringBootApplication
 @EnableHystrix
 public class CoffeeShopQuery {
