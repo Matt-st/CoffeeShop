@@ -9,3 +9,7 @@ The query service is the 'Q' in CQRS which stands for command query response seg
 
 ## Operations
 ![Swagger UI Image](img/swagger-doc.png?raw=true "Title")
+
+
+## Zipkin UI
+![Zipkin UI Image](img/zipkin-query.png?raw=true "Title")
