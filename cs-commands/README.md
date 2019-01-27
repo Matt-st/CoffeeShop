@@ -10,3 +10,6 @@ To view the swagger documentation: `localhost:8080/swagger-ui.html`
 
 ## Operations
 ![Swagger UI Image](img/swagger-docs.png?raw=true "Title")
+
+## Zipkin Tracing
+![Zipkin UI Image](img/zipkin-commands.png?raw=true "Title")
