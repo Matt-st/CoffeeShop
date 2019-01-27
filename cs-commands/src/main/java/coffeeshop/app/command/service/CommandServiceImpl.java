@@ -33,33 +33,37 @@ public class CommandServiceImpl implements CommandService {
 		kafkaTemplate.send(topicName, msg);
 	}
 
-	@HystrixCommand(fallbackMethod = "itemFallback", commandProperties = { @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000") })
+	@HystrixCommand(fallbackMethod = "itemFallback", commandProperties = { @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5000") })
 	public void updateMenuItem(MenuItem item) {
 		sendMessage("Update menu item.");
 		logger.info("Updating menu items");
 		repo.save(item);
 	}
 
-	@HystrixCommand(fallbackMethod = "itemFallback", commandProperties = { @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000") })
+	@HystrixCommand(fallbackMethod = "itemFallback", commandProperties = { @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5000") })
 	public void deleteMenuItem(String id) {
 		sendMessage("Delete menu item.");
 		logger.info("Deleteing menu items");
 		repo.deleteById(id);
 	}
 
-	@HystrixCommand(fallbackMethod = "itemFallback", commandProperties = { @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000") })
+	@HystrixCommand(fallbackMethod = "itemFallback", commandProperties = { @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5000") })
 	public void createMenuItem(MenuItem item) {
 		sendMessage("Create menu item.");
 		logger.info("Creating menu items");
 		repo.save(item);
 	}
 	
-	public void itemFallBack(){
+	public void itemFallback(MenuItem item){
 		logger.info("Item failed.");
 	}
 	
-	public void kafkaPublishFallback(){
-		logger.info("publishing event to kafka failed.");
+	public void itemFallback(String item){
+		logger.info("Item failed.");
+	}
+	
+	public void kafkaPublishFallback(String msg){
+		logger.info("publishing event to kafka failed." + msg);
 	}
 	
 	

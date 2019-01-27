@@ -34,7 +34,7 @@ public class QueryServiceImpl implements QueryService {
 		kafkaTemplate.send(topicName, msg);
 	}
 
-	@HystrixCommand(fallbackMethod = "retrieveFallback", commandProperties = { @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000") })
+	@HystrixCommand(fallbackMethod = "retrieveFallback", commandProperties = { @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5000") })
 	public List<MenuItem> retrieveMenuItems() {
 		List<MenuItem> l = retrieve();
 		
