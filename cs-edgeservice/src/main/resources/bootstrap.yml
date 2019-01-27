@@ -1,6 +1,0 @@
-spring:
-  application:
-    name: cs-edgeservice
-  cloud:
-    discovery:
-      enabled: true
