@@ -10,12 +10,7 @@
   <packaging>pom</packaging>
  
   <modules>
-    <module>cs-eureka</module>
-    <module>cs-config</module>
     <module>cs-query</module>
     <module>cs-commands</module>
-    <module>cs-edgeservice</module>
-    <module>cs-eventlog</module>
-    <module>cs-zipkin</module>
   </modules>
 </project>
