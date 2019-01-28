@@ -11,6 +11,5 @@
  
   <modules>
     <module>cs-query</module>
-    <module>cs-commands</module>
   </modules>
 </project>
