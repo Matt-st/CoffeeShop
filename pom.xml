@@ -17,5 +17,7 @@
     <module>cs-edgeservice</module>
     <module>cs-eventlog</module>
     <module>cs-zipkin</module>
+    <module>cs-hystrixdashboard</module>
+    <module>cs-webapplication</module>
   </modules>
 </project>
