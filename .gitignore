@@ -3,7 +3,9 @@
 .DS*
 # Log file
 *.log
-
+*.project
+*.classpath
+*.settings
 # BlueJ files
 *.ctxt
 

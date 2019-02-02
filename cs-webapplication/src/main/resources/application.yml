@@ -1,0 +1,10 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: Menu-UI
+    
+    
+menu:
+  ribbon:
+    listOfServers: localhost:9999
