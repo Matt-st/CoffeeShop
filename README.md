@@ -17,6 +17,8 @@ By storing our logs in the database then we can hook up a search tool where we c
 This application is the spring-boot eureka server which allows for service discovery and registration.
 
 # Technologies
+Thymeleaf templating
+Feign rest client
 Spring Cloud Api  
 Spring Discovery/Registration Service - Eureka  
 Spring-boot  
@@ -25,6 +27,16 @@ Cassandra -  datastore for our set of applications
 Zipkin Service  
 Hystrix  
 Spring Cloud Config  
+Swagger
+
+
+# Design Patterns
+API Gateway
+Command Query Response Segregation
+Service Discovery and Registration
+Fault Tolerance
+Event Sourcing
+Eventual Consistency Data Model
 
 
 ## Cassandra Database
