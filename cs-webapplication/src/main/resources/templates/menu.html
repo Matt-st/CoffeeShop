@@ -7,12 +7,21 @@
 </head>
 <body>
 	<h1>Welcome to the CoffeeShop Menu</h1>
-	<tr th:each="item : ${items}">
-		<td th:text="${item.id}">1</td>
-		<td><a href="#" th:text="${item.name}">Title ...</a></td>
-		<td th:text="${item.description}">Text ...</td>
-		<td th:text="${item.category}">Text ...</td>
-	</tr>
+	<table>
+		<tr>
+			<th>Id</th>
+			<th>Title</th>
+			<th>Description</th>
+			<th>Category</th>
+		</tr>
+
+		<tr th:each="item : ${items}">
+			<td th:text="${item.id}">1</td>
+			<td><a href="#" th:text="${item.name}">Title ...</a></td>
+			<td th:text="${item.description}">Text ...</td>
+			<td th:text="${item.category}">Text ...</td>
+		</tr>
+	</table>
 	<p>
 		<span
 			th:text="'Today is: ' + ${#dates.format(#dates.createNow(), 'dd MMM yyyy HH:mm')}"

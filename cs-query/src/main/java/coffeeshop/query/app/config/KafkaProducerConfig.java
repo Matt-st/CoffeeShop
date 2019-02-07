@@ -25,7 +25,7 @@ public class KafkaProducerConfig {
           ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, 
           bootstrapAddress);
         //set this because testing locally I sometimes don't have the full architecture running and it will hang
-        configProps.put("max.block.ms", "3000");
+        configProps.put("max.block.ms", "200");
         configProps.put(
           ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, 
           StringSerializer.class);
