@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title>Home page</title>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-    	<h1>Welcome to the CoffeeShop</h1>
-    	Click here to see the menu.
-    	<a th:href="@{/menu}">click me</a>
-    	
-        <p>
-        <span th:text="'Today is: ' + ${#dates.format(#dates.createNow(), 'dd MMM yyyy HH:mm')}" th:remove="tag"></span>
-        </p>
-    </body>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org"
+	layout:decorate="~{fragments/layout}">
+<head>
+<title>Index</title>
+</head>
+<body>
+	<div layout:fragment="content" th:remove="tag">
+		<h1>Welcome to the CoffeeShop</h1>
+		<p>
+			<a href="/user" th:href="@{/menu}">Menu</a>
+		</p>
+		<ul>
+			<li>Orders <a href="/user" th:href="@{/user}">Place an order</a></li>
+		</ul>
+	</div>
+</body>
 </html>

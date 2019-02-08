@@ -61,4 +61,10 @@ public class MenuItem {
 		
 	}
 	
+	@Override
+	public String toString() 
+    { 
+        return this.name + " " + this.description + " " + this.category + " " + this.id ; 
+    } 
+	
 }

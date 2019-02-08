@@ -3,8 +3,22 @@ server:
 spring:
   application:
     name: Menu-UI
-    
-    
+  thymeleaf:
+    cache: false
+    check-template: true
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    encoding: UTF-8
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html   
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO  
+
 menu:
   ribbon:
     listOfServers: localhost:9999
