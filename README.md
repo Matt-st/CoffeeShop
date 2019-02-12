@@ -18,6 +18,16 @@ By storing our logs in the database then we can hook up a search tool where we c
 ## CoffeeShop-Eureka
 This application is the spring-boot eureka server which allows for service discovery and registration.
 
+## CoffeeShop-Config
+This application is the config server which allows the applications (cs-query, cs-command, cs-edgeservice, cs-zipkin) to get there configurations on demand and offer the ability to leverage the `@refreshscope`.
+
+## CoffeeShop-Edgeservice
+This application is the api gateway to our backend services.
+
+## CoffeeShop-zipkin
+This application is the zipkin distributed tracing system based off the google dapper paper.  My rest services will be sending traces to this service.
+
+
 # Technologies
 Thymeleaf templating
 Feign rest client
