@@ -12,7 +12,18 @@ spring:
     encoding: UTF-8
     mode: HTML
     prefix: classpath:/templates/
-    suffix: .html   
+    suffix: .html  
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: create
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo_db?autoReconnect=true&useSSL=false
+    username: user_1
+    password: test
+    driver-class-name: com.mysql.jdbc.Driver
+
 logging:
   level:
     root: INFO
