@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 import java.util.UUID;
 
+
 import org.springframework.data.cassandra.core.mapping.CassandraType;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
@@ -19,7 +20,8 @@ public class MenuItem {
 	@ApiModelProperty(value = "Unique identifier used to identify")
 	public String id;
 	
-	@ApiModelProperty(value = "Name of the menu item like bannana or apple.")
+
+	@ApiModelProperty(value = "Name of the menu item like bannana or apple.", required=true)
 	public String name;
 	
 	@ApiModelProperty(value = "Description provides information about item.")
