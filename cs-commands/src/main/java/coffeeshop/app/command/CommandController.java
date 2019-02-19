@@ -8,6 +8,8 @@ import io.swagger.annotations.ApiResponses;
 import java.util.List;
 import java.util.UUID;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,7 +40,7 @@ public class CommandController {
             @ApiResponse(code = 403, message = "Accessing the resource you were trying to reach is forbidden"),
             @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
     })
-	public void createMenuItem(@RequestBody MenuItem item) {
+	public void createMenuItem(@Valid @RequestBody MenuItem item) {
 		item.setId(UUID.randomUUID().toString()	);
 		commandService.createMenuItem(item);
 	}
@@ -51,7 +53,7 @@ public class CommandController {
             @ApiResponse(code = 403, message = "Accessing the resource you were trying to reach is forbidden"),
             @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
     })
-	public void updateMenuItem(@RequestBody MenuItem item) {	
+	public void updateMenuItem(@Valid @RequestBody MenuItem item) {	
 		commandService.updateMenuItem(item);
 	}
 	

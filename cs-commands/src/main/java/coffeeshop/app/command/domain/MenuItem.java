@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 import java.util.UUID;
 
+import javax.validation.constraints.NotNull;
 
 import org.springframework.data.cassandra.core.mapping.CassandraType;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
@@ -20,13 +21,13 @@ public class MenuItem {
 	@ApiModelProperty(value = "Unique identifier used to identify")
 	public String id;
 	
-
+	@NotNull
 	@ApiModelProperty(value = "Name of the menu item like bannana or apple.", required=true)
 	public String name;
-	
+	@NotNull
 	@ApiModelProperty(value = "Description provides information about item.")
 	public String description;
-	
+	@NotNull
 	@ApiModelProperty(value = "Category is a value to represent where on the menu the items belong.", allowableValues = "Breakfast, Brunch, Lunch, Dinner")
 	private String category;
 	
