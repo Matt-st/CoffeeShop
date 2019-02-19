@@ -43,12 +43,13 @@ Swagger
 
 
 # Design Patterns
-API Gateway
-Command Query Response Segregation
-Service Discovery and Registration
-Fault Tolerance
-Event Sourcing
-Eventual Consistency Data Model
+API Gateway   
+Command Query Response Segregation   
+Service Discovery and Registration   
+Fault Tolerance   
+Event Sourcing   
+Eventual Consistency Data Model   
+Builder Object Creational Pattern   
 
 
 ## Cassandra Database
